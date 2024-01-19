@@ -33,13 +33,8 @@ $ yarn dev
 $ npm run dev
 ```
 
-### Learn more
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Important Note
+For this project, I used the [W] API developed in NestJS. However, since I utilized the free instance of Amazon Web Services and do not own a domain, I don't have an SSL certificate [https] for the billing [endpoint]. The alternative is to disable the [Insecure content] ALLOW in the browser settings while conducting the test.
 
 ## Deploy on Vercel
 The [W] app has been deployed using Vercel services.
