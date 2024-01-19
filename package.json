@@ -9,17 +9,39 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "@types/rc-slider": "^9.3.1",
+    "bcryptjs": "^2.4.3",
+    "credit-card-type": "^10.0.0",
+    "formik": "^2.4.5",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.12.5",
+    "next": "14.0.4",
+    "next-auth": "^4.24.5",
+    "next-redux-wrapper": "^8.1.0",
+    "rc-slider": "^10.5.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-icons": "^5.0.1",
+    "react-modal": "^3.16.1",
+    "react-query": "^3.39.3",
+    "react-rater": "^6.0.5",
+    "react-redux": "^9.1.0",
+    "redux": "^5.0.1",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.69.7",
+    "store": "^2.0.12",
+    "swiper": "^11.0.5",
+    "swr": "^2.2.4",
+    "use-onclickoutside": "^0.4.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

@@ -1,0 +1,13 @@
+
+import { withAuth } from "next-auth/middleware";
+export default withAuth({
+  secret: process.env.NEXTAUTH_SECRET,
+});
+export const config = {
+  matcher: [
+    "/product/:path*", 
+    "/cart/:path*",
+    "/payment/:path*"
+  ],
+
+};

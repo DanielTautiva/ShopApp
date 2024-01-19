@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > *{
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Estilo para el fondo gris transparente */
+.react-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo gris transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para el modal */
+.react-modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Borde redondeado */
+  background: #fff;
+  outline: none;
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  width: 100%;
+}
+
+.flex-actions-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.loading-payment{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3333337a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loading-img{
+  border-radius: 40px;
+}
+
+.loading-text{
+  position: relative;
+  top: -30px;
+}
+
+.checkout-content-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.billing-complete{
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-complete span{
+  font-weight: bold;
+  color: #000;
+  margin-right: 10px;
+}
+
+.billing-complete label{
+  margin: 12px 0px;
+}
