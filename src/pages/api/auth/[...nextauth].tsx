@@ -1,6 +1,7 @@
+import { compare } from 'bcryptjs';
+
 import CredentialsProvider from 'next-auth/providers/credentials';
 import NextAuth from 'next-auth';
-import { compare } from 'bcryptjs';
 import connectDB from '../../../utils/db';
 import UserModel from '../../../models/User';
 

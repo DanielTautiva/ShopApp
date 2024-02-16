@@ -48,7 +48,6 @@ const Content = ({ product }: ProductContent) => {
       count,
       product: productToSave
     }
-
     dispatch(addProduct(productStore));
   }
 
@@ -87,11 +86,8 @@ const Content = ({ product }: ProductContent) => {
           <h5>Size: <strong>See size table</strong></h5>
           <div className="checkbox-color-wrapper">
             <div className="select-wrapper">
-              <select onChange={onSelectChange}>
+              <select>
                 <option>Choose size</option>
-                {productsSizes.map(type => (
-                  <option value={type.label}>{type.label}</option>
-                ))}
               </select>
             </div>
           </div>

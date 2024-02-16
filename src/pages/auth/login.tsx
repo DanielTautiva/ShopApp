@@ -6,11 +6,10 @@ import { signIn } from "next-auth/react"
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { HiAtSymbol, HiFingerPrint } from "react-icons/hi";
-import { useFormik } from 'formik';
-import login_validate from '../../utils/validate';
+
 import styles from '../../../styles/Form.module.css';
 import LayoutOutside from '../../layout/Layout-outside'
-
+import { useFormik } from 'formik';
 
 export default function Login(){
 
@@ -83,6 +82,8 @@ export default function Login(){
             <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
                 <div className={`${styles.input_group} ${formik.errors.email && formik.touched.email ? 'border-rose-600' : ''}`}>
                     <input 
+                    id="email-user"
+                    data-testid="email-user"
                     type="email"
                     placeholder='Email'
                     className={styles.input_text}
@@ -96,6 +97,8 @@ export default function Login(){
    
                 <div className={`${styles.input_group} ${formik.errors.password && formik.touched.password ? 'border-rose-600' : ''}`}>
                     <input 
+                     id="password-user"
+                     data-testid="password-user"
                     type={`${show ? "text" : "password"}`}
                     placeholder='password'
                     className={styles.input_text} 
