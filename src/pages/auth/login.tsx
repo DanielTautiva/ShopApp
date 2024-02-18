@@ -26,7 +26,7 @@ export default function Login(){
     })
     
     async function onSubmit(values: any){
-
+ 
         const login: any = await signIn('credentials', {
             redirect: false,
             email: values.email,
@@ -41,7 +41,7 @@ export default function Login(){
                 headers : { 'Content-Type': 'application/json'},
                 body: JSON.stringify(values)
             }
-    
+            
             await fetch('/api/auth/login', options)
             .then(res => res.json())
             .then((data) => {
@@ -111,7 +111,7 @@ export default function Login(){
                 </div>
 
                 <div className="input-button">
-                    <button type='submit' className={styles.button}>
+                    <button type='submit' className={styles.button} data-testid="login-button">
                         Login
                     </button>
                 </div>

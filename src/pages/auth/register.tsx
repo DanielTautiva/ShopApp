@@ -15,8 +15,10 @@ export default function Register(){
     const router = useRouter()
     const formik = useFormik({
         initialValues: {
-            username : '',
+            fullname: '',
+            address: '',
             email: '',
+            phone: '',
             password: '',
             cpassword: ''
         },
@@ -59,6 +61,8 @@ export default function Register(){
             <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
                 <div className={`${styles.input_group} ${formik.errors.fullname && formik.touched.fullname ? 'border-rose-600' : ''}`}>
                     <input 
+                        id="name-user"
+                        data-testid="name-user"
                         type="text"
                         placeholder=' Nombre Completo'
                         className={styles.input_text}
@@ -71,7 +75,9 @@ export default function Register(){
 
                 <div className={`${styles.input_group} ${formik.errors.address && formik.touched.address ? 'border-rose-600' : ''}`}>
                     <input 
+                    id="address-user"
                     type="text"
+                    data-testid="address-user"
                     placeholder='Direccion'
                     className={styles.input_text}
                     {...formik.getFieldProps('address')}
@@ -98,7 +104,9 @@ export default function Register(){
 
                 <div className={`${styles.input_group} ${formik.errors.phone && formik.touched.phone ? 'border-rose-600' : ''}`}>
                     <input 
+                    id="phone-user"
                     type="text"
+                    data-testid="phone-user"
                     placeholder='Numero de Telefono'
                     className={styles.input_text}
                     {...formik.getFieldProps('phone')}
@@ -125,6 +133,8 @@ export default function Register(){
 
                 <div className={`${styles.input_group} ${formik.errors.cpassword && formik.touched.cpassword ? 'border-rose-600' : ''}`}>
                     <input 
+                    id="passwordconfirm-user"
+                    data-testid="passwordconfirm-user"
                     type={`${show.cpassword ? "text" : "password"}`}
                     placeholder='Confirm Password'
                     className={styles.input_text}
@@ -135,7 +145,7 @@ export default function Register(){
                     </span>
                 </div>
                 <div className="input-button">
-                    <button type='submit' className={styles.button}>
+                    <button type='submit' className={styles.button}  data-testid="signup-button">
                         Sign Up
                     </button>
                 </div>
